@@ -2,6 +2,33 @@
 
 ## Usage
 
+```bash
+# clone repository
+git clone https://github.com/texotek/fernwartung-ek.git
+cd fernwartung-ek
+
+# execute script
+./master_script.sh
+
+# add a user
+useradd -m user
+# set a password
+passwd user
+# enable xfce for xrdp
+echo "startxfce4" | tee /home/user/.xsession
+
+
+
+# on the client:
+# replace <SERVER IP>
+SERVER_IP=<SERVER IP>
+# download the conf from 
+scp root@$SERVER_IP:~/fernwartung-ek/wireguard/client.conf wg1.conf
+# start wireguard interface
+sudo wg-quick up ./wg1.conf
+```
+
+
 
 ## VPN Setup
 
