@@ -16,3 +16,5 @@ publicIp=$(curl ifconfig.me -4)
 
 printf "[Interface]\nPrivateKey=$clientKey\nAddress=10.0.2.2/24\n[Peer]\nPublicKey=$publicKey\nAllowedIPs=10.0.2.1/32\nEndpoint=$publicIp:51820" > client.conf
 
+cd ..
+

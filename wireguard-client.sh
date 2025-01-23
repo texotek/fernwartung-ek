@@ -1,5 +1,5 @@
 #!/bin/bash
-scp sysint:~/wireguard/client.conf wg1.conf
+scp sysint:~/fernwartung-ek/wireguard/client.conf wg1.conf
 sudo wg-quick up ./wg1.conf
 
 # mkdir wireguard
